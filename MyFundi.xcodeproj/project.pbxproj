@@ -8,20 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		26E2B7041F80467F00AC390F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7031F80467F00AC390F /* AppDelegate.swift */; };
-		26E2B7061F80467F00AC390F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7051F80467F00AC390F /* ViewController.swift */; };
+		26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7051F80467F00AC390F /* SignInVC.swift */; };
 		26E2B7091F80467F00AC390F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E2B7071F80467F00AC390F /* Main.storyboard */; };
 		26E2B70B1F80467F00AC390F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E2B70A1F80467F00AC390F /* Assets.xcassets */; };
 		26E2B70E1F80467F00AC390F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E2B70C1F80467F00AC390F /* LaunchScreen.storyboard */; };
+		EF2650499DBF922763F162E3 /* Pods_MyFundi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A28BD009BA92AD7AF7ACD75 /* Pods_MyFundi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26E2B7001F80467F00AC390F /* MyFundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E2B7031F80467F00AC390F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26E2B7051F80467F00AC390F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26E2B7051F80467F00AC390F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		26E2B7081F80467F00AC390F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26E2B70A1F80467F00AC390F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E2B70D1F80467F00AC390F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E2B70F1F80467F00AC390F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E2B7151F804BBB00AC390F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A28BD009BA92AD7AF7ACD75 /* Pods_MyFundi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFundi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68D51C5CC75D8B149DA6987 /* Pods-MyFundi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFundi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi.debug.xcconfig"; sourceTree = "<group>"; };
+		FECD1AD256C4EF27AE1EEFB1 /* Pods-MyFundi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFundi.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2650499DBF922763F162E3 /* Pods_MyFundi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 			children = (
 				26E2B7021F80467F00AC390F /* MyFundi */,
 				26E2B7011F80467F00AC390F /* Products */,
+				F3796F4F2D7BC7D31CFA0100 /* Pods */,
+				75C99D1472CDE2CC58503BFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +62,56 @@
 		26E2B7021F80467F00AC390F /* MyFundi */ = {
 			isa = PBXGroup;
 			children = (
+				26E2B7161F8056A100AC390F /* Model */,
+				26E2B7181F8056BA00AC390F /* Controller */,
+				26E2B7171F8056B000AC390F /* View */,
 				26E2B7031F80467F00AC390F /* AppDelegate.swift */,
-				26E2B7051F80467F00AC390F /* ViewController.swift */,
 				26E2B7071F80467F00AC390F /* Main.storyboard */,
 				26E2B70A1F80467F00AC390F /* Assets.xcassets */,
 				26E2B70C1F80467F00AC390F /* LaunchScreen.storyboard */,
 				26E2B70F1F80467F00AC390F /* Info.plist */,
+				26E2B7151F804BBB00AC390F /* GoogleService-Info.plist */,
 			);
 			path = MyFundi;
+			sourceTree = "<group>";
+		};
+		26E2B7161F8056A100AC390F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26E2B7171F8056B000AC390F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26E2B7181F8056BA00AC390F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26E2B7051F80467F00AC390F /* SignInVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		75C99D1472CDE2CC58503BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A28BD009BA92AD7AF7ACD75 /* Pods_MyFundi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3796F4F2D7BC7D31CFA0100 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A68D51C5CC75D8B149DA6987 /* Pods-MyFundi.debug.xcconfig */,
+				FECD1AD256C4EF27AE1EEFB1 /* Pods-MyFundi.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26E2B7121F80467F00AC390F /* Build configuration list for PBXNativeTarget "MyFundi" */;
 			buildPhases = (
+				F40403311123E25CC3D0F10C /* [CP] Check Pods Manifest.lock */,
 				26E2B6FC1F80467E00AC390F /* Sources */,
 				26E2B6FD1F80467E00AC390F /* Frameworks */,
 				26E2B6FE1F80467E00AC390F /* Resources */,
+				4125174E4781FB0EACCF2334 /* [CP] Embed Pods Frameworks */,
+				B206DE513491EAD91FC2DDDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +184,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4125174E4781FB0EACCF2334 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B206DE513491EAD91FC2DDDB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F40403311123E25CC3D0F10C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFundi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		26E2B6FC1F80467E00AC390F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E2B7061F80467F00AC390F /* ViewController.swift in Sources */,
+				26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */,
 				26E2B7041F80467F00AC390F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,13 +385,14 @@
 		};
 		26E2B7131F80467F00AC390F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68D51C5CC75D8B149DA6987 /* Pods-MyFundi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D29KNE2D7;
 				INFOPLIST_FILE = MyFundi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bachman.MyFundi;
+				PRODUCT_BUNDLE_IDENTIFIER = Bachmanity.MyFundi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +401,14 @@
 		};
 		26E2B7141F80467F00AC390F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FECD1AD256C4EF27AE1EEFB1 /* Pods-MyFundi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D29KNE2D7;
 				INFOPLIST_FILE = MyFundi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Bachman.MyFundi;
+				PRODUCT_BUNDLE_IDENTIFIER = Bachmanity.MyFundi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
