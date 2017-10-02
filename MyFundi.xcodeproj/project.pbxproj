@@ -12,6 +12,7 @@
 		26732A1A1F808EFE00365AE5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A191F808EFE00365AE5 /* RoundButton.swift */; };
 		26732A1C1F80909A00365AE5 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A1B1F80909A00365AE5 /* FancyField.swift */; };
 		26732A1E1F8091C800365AE5 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A1D1F8091C800365AE5 /* FancyButton.swift */; };
+		26732A231F81C9D400365AE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26732A221F81C9D400365AE5 /* GoogleService-Info.plist */; };
 		26E2B7041F80467F00AC390F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7031F80467F00AC390F /* AppDelegate.swift */; };
 		26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7051F80467F00AC390F /* SignInVC.swift */; };
 		26E2B7091F80467F00AC390F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E2B7071F80467F00AC390F /* Main.storyboard */; };
@@ -27,6 +28,10 @@
 		26732A191F808EFE00365AE5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		26732A1B1F80909A00365AE5 /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		26732A1D1F8091C800365AE5 /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		26732A1F1F81BAF600365AE5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		26732A201F81BB1300365AE5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		26732A211F81C6A000365AE5 /* MyFundi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFundi.entitlements; sourceTree = "<group>"; };
+		26732A221F81C9D400365AE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26E2B7001F80467F00AC390F /* MyFundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E2B7031F80467F00AC390F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E2B7051F80467F00AC390F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		26E2B70A1F80467F00AC390F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E2B70D1F80467F00AC390F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E2B70F1F80467F00AC390F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26E53F201F80894B006F05E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B10D887822625C5D4E00BE8 /* Pods-MyFundi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFundi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi.debug.xcconfig"; sourceTree = "<group>"; };
 		D3222F0724323A121BB9F375 /* Pods_MyFundi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFundi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +84,7 @@
 		26E2B7021F80467F00AC390F /* MyFundi */ = {
 			isa = PBXGroup;
 			children = (
+				26732A211F81C6A000365AE5 /* MyFundi.entitlements */,
 				26732A161F808D3600365AE5 /* Utilities */,
 				26E2B7161F8056A100AC390F /* Model */,
 				26E2B7181F8056BA00AC390F /* Controller */,
@@ -89,7 +94,7 @@
 				26E2B70A1F80467F00AC390F /* Assets.xcassets */,
 				26E2B70C1F80467F00AC390F /* LaunchScreen.storyboard */,
 				26E2B70F1F80467F00AC390F /* Info.plist */,
-				26E53F201F80894B006F05E5 /* GoogleService-Info.plist */,
+				26732A221F81C9D400365AE5 /* GoogleService-Info.plist */,
 			);
 			path = MyFundi;
 			sourceTree = "<group>";
@@ -123,6 +128,8 @@
 		75C99D1472CDE2CC58503BFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26732A201F81BB1300365AE5 /* FBSDKLoginKit.framework */,
+				26732A1F1F81BAF600365AE5 /* FBSDKCoreKit.framework */,
 				D3222F0724323A121BB9F375 /* Pods_MyFundi.framework */,
 			);
 			name = Frameworks;
@@ -173,6 +180,11 @@
 					26E2B6FF1F80467E00AC390F = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -200,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E2B70E1F80467F00AC390F /* LaunchScreen.storyboard in Resources */,
+				26732A231F81C9D400365AE5 /* GoogleService-Info.plist in Resources */,
 				26E2B70B1F80467F00AC390F /* Assets.xcassets in Resources */,
 				26E2B7091F80467F00AC390F /* Main.storyboard in Resources */,
 			);
@@ -248,6 +261,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -255,6 +271,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -416,6 +435,7 @@
 			baseConfigurationReference = 8B10D887822625C5D4E00BE8 /* Pods-MyFundi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyFundi/MyFundi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D29KNE2D7;
@@ -434,6 +454,7 @@
 			baseConfigurationReference = 21AAB1E23E94C4E884242A83 /* Pods-MyFundi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyFundi/MyFundi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D29KNE2D7;
