@@ -14,6 +14,7 @@
 		26732A1E1F8091C800365AE5 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A1D1F8091C800365AE5 /* FancyButton.swift */; };
 		26732A231F81C9D400365AE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26732A221F81C9D400365AE5 /* GoogleService-Info.plist */; };
 		26732A251F81F5FD00365AE5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A241F81F5FD00365AE5 /* FeedVC.swift */; };
+		26732A271F82D88500365AE5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A261F82D88500365AE5 /* CircleView.swift */; };
 		26E2B7041F80467F00AC390F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7031F80467F00AC390F /* AppDelegate.swift */; };
 		26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E2B7051F80467F00AC390F /* SignInVC.swift */; };
 		26E2B7091F80467F00AC390F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E2B7071F80467F00AC390F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		26732A211F81C6A000365AE5 /* MyFundi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFundi.entitlements; sourceTree = "<group>"; };
 		26732A221F81C9D400365AE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26732A241F81F5FD00365AE5 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		26732A261F82D88500365AE5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		26E2B7001F80467F00AC390F /* MyFundi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFundi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E2B7031F80467F00AC390F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E2B7051F80467F00AC390F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				26732A191F808EFE00365AE5 /* RoundButton.swift */,
 				26732A1B1F80909A00365AE5 /* FancyField.swift */,
 				26732A1D1F8091C800365AE5 /* FancyButton.swift */,
+				26732A261F82D88500365AE5 /* CircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26732A271F82D88500365AE5 /* CircleView.swift in Sources */,
 				26732A1C1F80909A00365AE5 /* FancyField.swift in Sources */,
 				26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */,
 				26732A1A1F808EFE00365AE5 /* RoundButton.swift in Sources */,
