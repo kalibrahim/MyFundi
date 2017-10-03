@@ -16,6 +16,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var likesLbl: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var donationGoalLbl: UILabel!
+    @IBOutlet weak var currentDonationLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
