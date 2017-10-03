@@ -19,10 +19,20 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var donationGoalLbl: UILabel!
     @IBOutlet weak var currentDonationLbl: UILabel!
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
+    func configureCell(post: Post) {
+        self.post = post
+        self.caption.text = post.caption
+        self.likesLbl.text = "\(post.likes)"
+        self.currentDonationLbl.text = "\(post.currentDonation)"
+        self.donationGoalLbl.text = "\(post.donationGoal)"
+        self.fundraiserLbl.text = post.title
+    }
 
 }

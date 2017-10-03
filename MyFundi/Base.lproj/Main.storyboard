@@ -326,7 +326,7 @@
                                             <outlet property="currentDonationLbl" destination="sUt-OT-cvn" id="Qdz-D2-q0k"/>
                                             <outlet property="donationGoalLbl" destination="MDK-R5-lk5" id="cgE-j4-mh9"/>
                                             <outlet property="fundraiserLbl" destination="b50-xf-Fg0" id="nKD-x1-pL9"/>
-                                            <outlet property="likesLbl" destination="MDK-R5-lk5" id="o5I-Xv-Rbf"/>
+                                            <outlet property="likesLbl" destination="nPj-Sf-Ed9" id="wYP-lF-a9K"/>
                                             <outlet property="postImg" destination="Bw8-qy-Urg" id="JYC-FX-rrQ"/>
                                             <outlet property="profileImg" destination="K08-KF-snE" id="imE-cT-fB9"/>
                                             <outlet property="searchBar" destination="KtE-wB-mgn" id="nAH-MA-2Ue"/>

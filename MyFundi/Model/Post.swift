@@ -12,8 +12,9 @@ class Post {
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
-    private var _currentDonation: NSDecimalNumber!
-    private var _donationGoal: NSDecimalNumber!
+    private var _currentDonation: Int!
+    private var _donationGoal: Int!
+    private var _title: String!
     private var _postKey: String!
     
     var caption: String {
@@ -28,24 +29,29 @@ class Post {
         return _likes
     }
     
-    var currentDonation: NSDecimalNumber {
+    var currentDonation: Int {
         return _currentDonation
     }
     
-    var donationGoal: NSDecimalNumber {
+    var donationGoal: Int {
         return _donationGoal
+    }
+    
+    var title: String {
+        return _title
     }
     
     var postKey: String {
         return _postKey
     }
     
-    init(caption: String, imageUrl: String, likes: Int, currentDonation: NSDecimalNumber, donationGoal: NSDecimalNumber) {
+    init(caption: String, imageUrl: String, likes: Int, currentDonation: Int, donationGoal: Int, title: String) {
         self._caption = caption
         self._imageUrl = imageUrl
         self._likes = likes
         self._currentDonation = currentDonation
         self._donationGoal = donationGoal
+        self._title = title
     }
     
     init(postKey: String, postData: Dictionary<String, AnyObject>) {
@@ -63,12 +69,16 @@ class Post {
             self._likes = likes
         }
         
-        if let currentDonation = postData["currentDonation"] as? NSDecimalNumber {
+        if let currentDonation = postData["currentDonation"] as? Int {
             self._currentDonation = currentDonation
         }
         
-        if let donationGoal = postData["donationGoal"] as? NSDecimalNumber {
+        if let donationGoal = postData["donationGoal"] as? Int {
             self._donationGoal = donationGoal
+        }
+        
+        if let title = postData["title"] as? String {
+            self._title = title
         }
         
     }
