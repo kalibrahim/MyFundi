@@ -174,57 +174,64 @@
                                     <constraint firstItem="WOb-9f-wxx" firstAttribute="top" secondItem="fJw-EE-65C" secondAttribute="top" constant="20" id="eSx-fS-Kcg"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbp-ez-O1t">
-                                <rect key="frame" x="0.0" y="198" width="375" height="469"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbp-ez-O1t">
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="469" id="rou-jm-IAS"/>
+                                    <constraint firstAttribute="height" constant="550" id="rou-jm-IAS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="328" id="l5B-r8-i9t">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="328" id="l5B-r8-i9t" customClass="PostCell" customModule="MyFundi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="328"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l5B-r8-i9t" id="2oc-Bt-7IT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="327.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="328"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTj-we-3yC" customClass="FancyView" customModule="MyFundi" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="343" height="311.5"/>
+                                                    <rect key="frame" x="16" y="5" width="343" height="318"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-BA-hTr">
-                                                            <rect key="frame" x="8" y="8" width="327" height="268"/>
+                                                            <rect key="frame" x="8" y="8" width="327" height="274.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jnb-tw-vOh">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="70"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="K08-KF-snE">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="K08-KF-snE" customClass="CircleView" customModule="MyFundi" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="5" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="J4F-So-qdM"/>
                                                                                 <constraint firstAttribute="width" constant="60" id="o4S-TZ-cuu"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBQ For Vets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b50-xf-Fg0">
-                                                                            <rect key="frame" x="68" y="19" width="191" height="22"/>
+                                                                            <rect key="frame" x="68" y="24" width="191" height="22"/>
                                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                                             <color key="textColor" red="0.90238732099999996" green="0.31384927029999998" blue="0.52205717559999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-si-e7t">
-                                                                            <rect key="frame" x="267" y="0.0" width="60" height="60"/>
+                                                                            <rect key="frame" x="267" y="5" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="E5N-bI-ZMA"/>
                                                                                 <constraint firstAttribute="width" constant="60" id="kta-3K-eUK"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="K08-KF-snE" firstAttribute="top" secondItem="Jnb-tw-vOh" secondAttribute="top" constant="5" id="0bJ-je-gSS"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="K08-KF-snE" secondAttribute="bottom" constant="5" id="zuq-U1-AVB"/>
+                                                                    </constraints>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Bw8-qy-Urg">
-                                                                    <rect key="frame" x="0.0" y="60" width="327" height="125"/>
+                                                                    <rect key="frame" x="0.0" y="70" width="327" height="154.5"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-Mk-ciu">
-                                                                    <rect key="frame" x="0.0" y="185" width="327" height="83"/>
+                                                                    <rect key="frame" x="0.0" y="224.5" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="76G-6z-ShD"/>
+                                                                    </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -232,18 +239,18 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-BO-aaM">
-                                                            <rect key="frame" x="259" y="284" width="76" height="19.5"/>
+                                                            <rect key="frame" x="259" y="290.5" width="76" height="19.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYT-Rj-1ZG">
                                                                     <rect key="frame" x="0.0" y="0.0" width="34" height="19.5"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDK-R5-lk5">
                                                                     <rect key="frame" x="39" y="0.0" width="37" height="19.5"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -262,20 +269,31 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FTj-we-3yC" firstAttribute="leading" secondItem="2oc-Bt-7IT" secondAttribute="leading" constant="16" id="41x-LZ-dVB"/>
-                                                <constraint firstItem="FTj-we-3yC" firstAttribute="top" secondItem="2oc-Bt-7IT" secondAttribute="top" constant="8" id="Nyl-u5-xNJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="FTj-we-3yC" secondAttribute="bottom" constant="8" id="cDN-hM-VXo"/>
+                                                <constraint firstItem="FTj-we-3yC" firstAttribute="top" secondItem="2oc-Bt-7IT" secondAttribute="top" constant="5" id="Nyl-u5-xNJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="FTj-we-3yC" secondAttribute="bottom" constant="5" id="cDN-hM-VXo"/>
                                                 <constraint firstAttribute="trailing" secondItem="FTj-we-3yC" secondAttribute="trailing" constant="16" id="fBs-bM-Z0F"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="rkX-Mk-ciu" id="tnw-5k-5BW"/>
+                                            <outlet property="fundraiserLbl" destination="b50-xf-Fg0" id="nKD-x1-pL9"/>
+                                            <outlet property="likesLbl" destination="MDK-R5-lk5" id="o5I-Xv-Rbf"/>
+                                            <outlet property="postImg" destination="Bw8-qy-Urg" id="JYC-FX-rrQ"/>
+                                            <outlet property="profileImg" destination="K08-KF-snE" id="imE-cT-fB9"/>
+                                            <outlet property="searchBar" destination="KtE-wB-mgn" id="nAH-MA-2Ue"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KtE-wB-mgn">
-                                <rect key="frame" x="0.0" y="65" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lkq-oK-UIo"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltu-Wu-BpL" customClass="FancyView" customModule="MyFundi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="121" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="105" width="375" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-tn-xEK">
                                         <rect key="frame" x="8" y="8" width="359" height="49"/>
@@ -335,6 +353,7 @@
                         <viewLayoutGuide key="safeArea" id="NWr-v4-AGt"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Lbp-ez-O1t" id="aGm-Ob-fI8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="VdD-2h-53k"/>
                     </connections>
                 </viewController>
