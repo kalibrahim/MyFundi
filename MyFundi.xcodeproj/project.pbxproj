@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2655F0C21F83684B003323EF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655F0C11F83684B003323EF /* Post.swift */; };
 		26732A151F808C8C00365AE5 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A141F808C8C00365AE5 /* FancyView.swift */; };
 		26732A181F808D4B00365AE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A171F808D4B00365AE5 /* Constants.swift */; };
 		26732A1A1F808EFE00365AE5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26732A191F808EFE00365AE5 /* RoundButton.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		21AAB1E23E94C4E884242A83 /* Pods-MyFundi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFundi.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyFundi/Pods-MyFundi.release.xcconfig"; sourceTree = "<group>"; };
+		2655F0C11F83684B003323EF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		26732A141F808C8C00365AE5 /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		26732A171F808D4B00365AE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		26732A191F808EFE00365AE5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		26E2B7161F8056A100AC390F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2655F0C11F83684B003323EF /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				26732A271F82D88500365AE5 /* CircleView.swift in Sources */,
 				26732A1C1F80909A00365AE5 /* FancyField.swift in Sources */,
 				26E2B7061F80467F00AC390F /* SignInVC.swift in Sources */,
+				2655F0C21F83684B003323EF /* Post.swift in Sources */,
 				26732A1A1F808EFE00365AE5 /* RoundButton.swift in Sources */,
 				26732A1E1F8091C800365AE5 /* FancyButton.swift in Sources */,
 				26732A2D1F83511500365AE5 /* DataService.swift in Sources */,
