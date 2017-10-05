@@ -12,8 +12,8 @@ class Post {
     private var _caption: String!
     private var _imageUrl: String!
     private var _likes: Int!
-    private var _currentDonation: Int!
-    private var _donationGoal: Int!
+    private var _currentDonation: Float!
+    private var _donationGoal: Float!
     private var _title: String!
     private var _postKey: String!
     
@@ -29,11 +29,11 @@ class Post {
         return _likes
     }
     
-    var currentDonation: Int {
+    var currentDonation: Float {
         return _currentDonation
     }
     
-    var donationGoal: Int {
+    var donationGoal: Float {
         return _donationGoal
     }
     
@@ -45,7 +45,7 @@ class Post {
         return _postKey
     }
     
-    init(caption: String, imageUrl: String, likes: Int, currentDonation: Int, donationGoal: Int, title: String) {
+    init(caption: String, imageUrl: String, likes: Int, currentDonation: Float, donationGoal: Float, title: String) {
         self._caption = caption
         self._imageUrl = imageUrl
         self._likes = likes
@@ -69,11 +69,11 @@ class Post {
             self._likes = likes
         }
         
-        if let currentDonation = postData["currentDonation"] as? Int {
+        if let currentDonation = postData["currentDonation"] as? Float {
             self._currentDonation = currentDonation
         }
         
-        if let donationGoal = postData["donationGoal"] as? Int {
+        if let donationGoal = postData["donationGoal"] as? Float {
             self._donationGoal = donationGoal
         }
         

@@ -342,28 +342,32 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltu-Wu-BpL" customClass="FancyView" customModule="MyFundi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="105" width="375" height="65"/>
+                                <rect key="frame" x="16" y="113" width="343" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-tn-xEK">
-                                        <rect key="frame" x="8" y="8" width="359" height="49"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-A4-B2q" customClass="CircleView" customModule="MyFundi" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-A4-B2q" customClass="CircleView" customModule="MyFundi" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="53" height="49"/>
                                                 <color key="backgroundColor" red="0.00040685525164008141" green="0.23623740673065186" blue="0.58784610033035278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="Gke-Om-HYa"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="HRC-gQ-5NM"/>
                                                     <constraint firstAttribute="width" constant="53" id="Vpw-n2-Kr6"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="3Zw-ml-0Jo" appends="YES" id="xHE-Sw-ixK"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Fundraiser" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21k-XR-aQX" customClass="FancyField" customModule="MyFundi" customModuleProvider="target">
-                                                <rect key="frame" x="63" y="9.5" width="237" height="30"/>
+                                                <rect key="frame" x="63" y="9.5" width="205" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IA8-f5-Zjx" customClass="RoundButton" customModule="MyFundi" customModuleProvider="target">
-                                                <rect key="frame" x="310" y="0.0" width="49" height="49"/>
+                                                <rect key="frame" x="278" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.90238732099533081" green="0.31384927034378052" blue="0.5220571756362915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="Wl8-M9-blU"/>
@@ -387,26 +391,32 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KtE-wB-mgn" firstAttribute="top" secondItem="fJw-EE-65C" secondAttribute="bottom" id="6Fs-18-5Kj"/>
-                            <constraint firstItem="Ltu-Wu-BpL" firstAttribute="leading" secondItem="NWr-v4-AGt" secondAttribute="leading" id="7A7-H1-fJe"/>
+                            <constraint firstItem="Ltu-Wu-BpL" firstAttribute="leading" secondItem="NWr-v4-AGt" secondAttribute="leading" constant="16" id="7A7-H1-fJe"/>
                             <constraint firstItem="Lbp-ez-O1t" firstAttribute="bottom" secondItem="NWr-v4-AGt" secondAttribute="bottom" id="7hr-PT-z07"/>
                             <constraint firstItem="fJw-EE-65C" firstAttribute="trailing" secondItem="NWr-v4-AGt" secondAttribute="trailing" id="BpG-YX-EGM"/>
-                            <constraint firstItem="Ltu-Wu-BpL" firstAttribute="top" secondItem="KtE-wB-mgn" secondAttribute="bottom" id="DG4-qH-5Rx"/>
+                            <constraint firstItem="Ltu-Wu-BpL" firstAttribute="top" secondItem="KtE-wB-mgn" secondAttribute="bottom" constant="8" id="DG4-qH-5Rx"/>
                             <constraint firstItem="Lbp-ez-O1t" firstAttribute="leading" secondItem="NWr-v4-AGt" secondAttribute="leading" id="OMj-dN-jca"/>
                             <constraint firstItem="KtE-wB-mgn" firstAttribute="leading" secondItem="NWr-v4-AGt" secondAttribute="leading" id="OwI-6L-ED3"/>
                             <constraint firstItem="Lbp-ez-O1t" firstAttribute="trailing" secondItem="NWr-v4-AGt" secondAttribute="trailing" id="RZy-yl-WBF"/>
                             <constraint firstItem="fJw-EE-65C" firstAttribute="leading" secondItem="NWr-v4-AGt" secondAttribute="leading" id="V0g-0Q-InG"/>
-                            <constraint firstItem="NWr-v4-AGt" firstAttribute="trailing" secondItem="Ltu-Wu-BpL" secondAttribute="trailing" id="Ycz-iN-AFr"/>
+                            <constraint firstItem="NWr-v4-AGt" firstAttribute="trailing" secondItem="Ltu-Wu-BpL" secondAttribute="trailing" constant="16" id="Ycz-iN-AFr"/>
                             <constraint firstItem="KtE-wB-mgn" firstAttribute="trailing" secondItem="NWr-v4-AGt" secondAttribute="trailing" id="gLw-z3-e6j"/>
                             <constraint firstItem="fJw-EE-65C" firstAttribute="top" secondItem="ahx-7g-aox" secondAttribute="top" id="tW4-GT-whq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWr-v4-AGt"/>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="d5G-A4-B2q" id="Zue-EO-T4k"/>
                         <outlet property="tableView" destination="Lbp-ez-O1t" id="aGm-Ob-fI8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="VdD-2h-53k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rtP-bd-IwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3Zw-ml-0Jo">
+                    <connections>
+                        <action selector="addImageTapped:" destination="Bum-bE-rxR" id="cT6-6c-jP8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="133.5832083958021"/>
         </scene>
