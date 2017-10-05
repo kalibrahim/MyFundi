@@ -10,15 +10,20 @@ import Foundation
 import Firebase
 
 let DB_BASE = Database.database().reference()
+let STORAGE_BASE = Storage.storage().reference()
 
 class DataService {
     
     static let ds = DataService()
     
+    // DB references
     private var _REF_BASE = DB_BASE
     private var _REF_FUNDRAISERS = DB_BASE.child("fundraisers")
     private var _REF_DONATIONS = DB_BASE.child("donations")
     private var _REF_USERS = DB_BASE.child("users")
+    
+    // Storage references
+    private var _REF_FUND_IMGS = STORAGE_BASE.child("fundraiser-pics")
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE
@@ -34,6 +39,10 @@ class DataService {
     
     var REF_USERS: DatabaseReference {
         return _REF_USERS
+    }
+    
+    var REF_FUND_IMGS: StorageReference {
+        return _REF_FUND_IMGS
     }
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
