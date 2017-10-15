@@ -17,6 +17,7 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
     
     @IBOutlet weak var profileImage: UIImageView!
     var posts = [Post]()
+    var fundraiserKeys = [String]()
     
     
     override func viewDidLoad() {
@@ -38,7 +39,12 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
                         if let userDict = snap.value as? Dictionary<String,AnyObject>{
 //                            print("JOE: \(userDict["fundraisers",value].values)")
                             if let fundraisers =  userDict["fundraisers"] as? [String:AnyObject]  {
-                                print("JOE: \(fundraisers)")
+                                var count = 0
+                                for fund in fundraisers{
+                                    self.fundraiserKeys.append(fund.key)
+                                     print("JOE Fund # \(count): \(self.fundraiserKeys[count])" )
+                                   count = count + 1
+                                }
 
                         }
                         
