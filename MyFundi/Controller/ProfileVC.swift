@@ -17,8 +17,13 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
     
     @IBOutlet weak var profileImage: UIImageView!
     var posts = [Post]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        print("JOE Current user ID is:" + userID)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,19 +31,35 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         
-        DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshot {
-                    print("Joe: Profile \(snap)")
-                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
-                        let key = snap.key
-                        let post = Post(postKey: key, postData: postDict)
-                        self.posts.append(post)
+        DataService.ds.REF_USERS.observe(.value) { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
+                for snap in snapshot{
+                    if userID == snap.key{
+                        if let userDict = snap.value as? Dictionary<String,AnyObject>{
+//                            print("JOE: \(userDict["fundraisers",value].values)")
+                            if let fundraisers =  userDict["fundraisers"] as? [String:AnyObject]  {
+                                print("JOE: \(fundraisers)")
+
+                        }
+                        
                     }
                 }
             }
-            self.tableView.reloadData()
-        })
+        }
+        }
+//        DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
+//            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+//                for snap in snapshot {
+//                    print("Joe: Profile \(snap)")
+//                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+//                        let key = snap.key
+//                        let post = Post(postKey: key, postData: postDict)
+//                        self.posts.append(post)
+//                    }
+//                }
+//            }
+//            self.tableView.reloadData()
+//        })
         
     }
 
