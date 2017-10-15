@@ -42,7 +42,7 @@ class User {
         if let name = userData["name"] as? String {
             self._name = name
         }
-        self._userRef = DataServices.ds.REF_USERS.child(_userKey)
+        self._userRef = DataService.ds.REF_USERS.child(_userKey)
         
     }
 }
