@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class ProfileHistoryCell: UITableViewCell {
 
     override func awakeFromNib() {
