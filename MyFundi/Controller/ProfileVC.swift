@@ -42,8 +42,9 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
                                 for fund in fundraisers{
                                     self.fundraiserKeys.append(fund.key)
                                     print("JOE: Fundraisers Found for User: \(snap.key)")
-                                    self.loadFundraisers()
+                                    
                                 }
+                                   self.loadFundraisers()
                             }
                             else {
                                 print("Joe: Fundraisers not found for user: \(snap.key)")
