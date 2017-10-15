@@ -23,7 +23,8 @@ class SignInVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
-            print("KHALID: ID found in ")
+            
+            print("KHALID: ID found in \(KEY_UID.characters)")
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
     }
@@ -93,6 +94,7 @@ class SignInVC: UIViewController {
     }
     
     func compeleteSignIn(id: String, userData: Dictionary<String, String>) {
+        print("JOE USER ID: \(id)")
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult =  KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("KHALID: Data saved to keychain \(keychainResult)")

@@ -28,6 +28,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        print("JOE Current user ID is:" + userID)
         
         DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
