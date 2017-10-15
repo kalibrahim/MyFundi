@@ -519,7 +519,7 @@
                                     <constraint firstAttribute="height" constant="119" id="o9F-h4-knQ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="HD1-2I-dQg">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="HD1-2I-dQg">
                                 <rect key="frame" x="210" y="154" width="44" height="44"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -703,8 +703,10 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="profileImage" destination="WJH-gZ-Y8m" id="RNR-La-ZQM"/>
                         <outlet property="tableView" destination="59N-Eq-3aB" id="r0T-Dv-uKc"/>
                         <segue destination="Bum-bE-rxR" kind="show" identifier="goToFeedFromProf" id="lrs-Gf-ulY"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignInFromProf" id="3AY-5i-bwn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVO-Od-Se8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,7 +719,11 @@
                 <tapGestureRecognizer id="qBy-Y2-HLM" userLabel="ProfileTap"/>
                 <tapGestureRecognizer id="DHg-wf-SXK" userLabel="BellTap"/>
                 <tapGestureRecognizer id="lud-kK-x9A" userLabel="GearTap"/>
-                <tapGestureRecognizer id="ThG-pa-4KR" userLabel="AddImageTap"/>
+                <tapGestureRecognizer id="ThG-pa-4KR" userLabel="AddImageTap">
+                    <connections>
+                        <action selector="addImageTapped:" destination="kr4-Ni-ixZ" id="isR-91-4W6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1680.8" y="143.47826086956522"/>
         </scene>
@@ -737,5 +743,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lrs-Gf-ulY"/>
+        <segue reference="3AY-5i-bwn"/>
     </inferredMetricsTieBreakers>
 </document>

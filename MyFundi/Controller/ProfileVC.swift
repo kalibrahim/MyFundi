@@ -15,7 +15,8 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
     @IBOutlet weak var tableView: UITableView!
     var imagePicker: UIImagePickerController!
     
-     var posts = [Post]()
+    @IBOutlet weak var profileImage: UIImageView!
+    var posts = [Post]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,11 +64,24 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
             return PostCell()
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            profileImage.image = image
+        } else {
+            print("KHALID: A valid image wasnt selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("KHALID: ID removed from keychain \(keychainResult)")
         try! Auth.auth().signOut()
-        performSegue(withIdentifier: "goToSignIn", sender: nil)
+        performSegue(withIdentifier: "goToSignInFromProf", sender: nil)
     }
     
   
