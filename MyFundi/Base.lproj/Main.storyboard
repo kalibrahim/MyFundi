@@ -602,6 +602,11 @@
                                                 <constraint firstItem="QHb-sF-CQ5" firstAttribute="leading" secondItem="Kzd-uF-WhN" secondAttribute="leading" id="cV8-VF-phd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="OWD-7J-pPO" id="GZE-fV-77p"/>
+                                            <outlet property="dateLabel" destination="OiK-zF-Bo8" id="iFb-n9-7N5"/>
+                                            <outlet property="titleLabel" destination="Tf9-uc-7O5" id="FBU-h4-Kn1"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="2" id="BNf-cw-Guc">
                                         <rect key="frame" x="0.0" y="104" width="375" height="2"/>
