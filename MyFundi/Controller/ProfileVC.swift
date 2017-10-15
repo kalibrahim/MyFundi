@@ -39,38 +39,47 @@ class ProfileVC: UIViewController,  UITableViewDelegate, UITableViewDataSource, 
                         if let userDict = snap.value as? Dictionary<String,AnyObject>{
 //                            print("JOE: \(userDict["fundraisers",value].values)")
                             if let fundraisers =  userDict["fundraisers"] as? [String:AnyObject]  {
-                                var count = 0
                                 for fund in fundraisers{
                                     self.fundraiserKeys.append(fund.key)
-                                     print("JOE Fund # \(count): \(self.fundraiserKeys[count])" )
-                                   count = count + 1
+                                    print("JOE: Fundraisers Found for User: \(snap.key)")
+                                    self.loadFundraisers()
                                 }
-
+                            }
+                            else {
+                                print("Joe: Fundraisers not found for user: \(snap.key)")
+                            }
                         }
                         
                     }
                 }
             }
         }
-        }
-//        DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
-//            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-//                for snap in snapshot {
-//                    print("Joe: Profile \(snap)")
-//                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
-//                        let key = snap.key
-//                        let post = Post(postKey: key, postData: postDict)
-//                        self.posts.append(post)
-//                    }
-//                }
-//            }
-//            self.tableView.reloadData()
-//        })
-        
+}
+    
+    func loadFundraisers(){
+    
+    DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
+                if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                    for snap in snapshot {
+                        for fundKey in self.fundraiserKeys{
+                            if snap.key == fundKey{
+                                if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                                    let key = snap.key
+                                    let post = Post(postKey: key, postData: postDict)
+                                    self.posts.append(post)
+                                }
+                            }
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+            })
+    
     }
 
+
     func numberOfSections(in tableView: UITableView) -> Int {
-       return 5
+       return 1
     }
     @IBAction func homeImageTapped(_ sender: AnyObject) {
         performSegue(withIdentifier: "goToFeedFromProf", sender: nil)
