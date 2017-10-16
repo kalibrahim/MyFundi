@@ -86,7 +86,6 @@ class Post {
         _postRef = DataService.ds.REF_FUNDRAISERS.child(_postKey)
         
     }
- 
     
     func adjustLikes(addLike: Bool) {
         if addLike {
@@ -97,4 +96,5 @@ class Post {
         _postRef.child("likes").setValue(_likes)
         
     }
+    
 }

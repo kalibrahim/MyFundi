@@ -30,7 +30,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
-        
+                
         DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 
@@ -65,12 +65,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-
+            
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as AnyObject) {
                 cell.configureCell(post: post, img: img)
             } else {
                 cell.configureCell(post: post)
-             }
+            }
             return cell
         } else {
             return PostCell()
@@ -142,7 +142,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         tableView.reloadData()
     }
-            
+    
+    @IBAction func profileImageTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToProfFromFeed", sender: nil)
+    }
     
     @IBAction func signOutTapped(_ sender: AnyObject) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)

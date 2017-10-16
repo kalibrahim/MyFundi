@@ -20,7 +20,6 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var donationGoalLbl: UILabel!
     @IBOutlet weak var currentDonationLbl: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
-
     
     var post: Post!
     var likesRef : DatabaseReference!
@@ -33,6 +32,7 @@ class PostCell: UITableViewCell {
         likeImage.addGestureRecognizer(tap)
         likeImage.isUserInteractionEnabled = true
     }
+    
     
     @objc func likeTapped(sender: UITapGestureRecognizer) {
         
@@ -62,21 +62,21 @@ class PostCell: UITableViewCell {
         if img != nil {
             self.postImg.image = img
         } else {
-                let ref = Storage.storage().reference(forURL: post.imageUrl)
+            let ref = Storage.storage().reference(forURL: post.imageUrl)
             ref.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
-                    if error != nil {
-                        print("KHALID: Unable to download image from firebase storage")
-                    } else {
-                        print("KHALID: Image downloaded from firebase storage")
-                        if let imgData = data {
-                            if let img = UIImage(data: imgData) {
-                                self.postImg.image = img
-                                FeedVC.imageCache.setObject(img, forKey: post.imageUrl as AnyObject)
-                            }
+                if error != nil {
+                    print("KHALID: Unable to download image from firebase storage")
+                } else {
+                    print("KHALID: Image downloaded from firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData) {
+                            self.postImg.image = img
+                            FeedVC.imageCache.setObject(img, forKey: post.imageUrl as AnyObject)
                         }
                     }
-                })
-            }
+                }
+            })
+        }
         
         likesRef.observeSingleEvent(of: .value) { (snapshot) in
             if let _ = snapshot.value as? NSNull {
@@ -90,4 +90,4 @@ class PostCell: UITableViewCell {
         
     }
     
-    }
+}
