@@ -742,7 +742,6 @@
         <image name="sign-out" width="92" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q3o-7o-dHr"/>
         <segue reference="lrs-Gf-ulY"/>
         <segue reference="VdD-2h-53k"/>
     </inferredMetricsTieBreakers>
