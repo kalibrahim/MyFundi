@@ -23,7 +23,7 @@ class PostCell: UITableViewCell {
 
     
     var post: Post!
-    let likesRef = DataService.ds.REF_USER_CURRENT.child("likes")
+    var likesRef : DatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,8 +34,25 @@ class PostCell: UITableViewCell {
         likeImage.isUserInteractionEnabled = true
     }
     
+    @objc func likeTapped(sender: UITapGestureRecognizer) {
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.likeImage.image = UIImage(named: "filled-heart")
+                self.post.adjustLikes(addLike: true)
+                self.likesRef.setValue(true)
+            } else {
+                self.likeImage.image = UIImage(named: "empty-heart")
+                self.post.adjustLikes(addLike: false)
+                self.likesRef.removeValue()
+            }
+        })
+    }
+    
     func configureCell(post: Post, img: UIImage? = nil) {
         self.post = post
+        likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
+        
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
         self.currentDonationLbl.text = "\(post.currentDonation)"
@@ -69,20 +86,8 @@ class PostCell: UITableViewCell {
             }
         }
         
-        func likeTapped(_ sender: UITapGestureRecognizer) {
-            likesRef.observeSingleEvent(of: .value) { (snapshot) in
-                if let _ = snapshot.value as? NSNull {
-                    self.likeImage.image = UIImage(named: "filled-heart")
-                    self.post.adjustLikes(addLike: true)
-                    self.likesRef.setValue(true)
-                } else {
-                    self.likeImage.image = UIImage(named: "empty-heart")
-                    self.post.adjustLikes(addLike: false)
-                    self.likesRef.removeValue()
-                }
-            }
-        }
         
-        }
+        
+    }
     
     }

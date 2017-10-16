@@ -33,16 +33,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.ds.REF_FUNDRAISERS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                
+                var posts = [Post]()
+                
                 for snap in snapshot {
                     print("SNAP: \(snap)")
+                    
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
-                        self.posts.append(post)
+                        posts.append(post)
                     }
                 }
+                self.posts = posts
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         })
     }
     
@@ -63,11 +68,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as AnyObject) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
-            }
+             }
+            return cell
         } else {
             return PostCell()
         }
