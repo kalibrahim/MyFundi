@@ -302,7 +302,7 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Bw8-qy-Urg">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Bw8-qy-Urg">
                                                                     <rect key="frame" x="0.0" y="89.5" width="327" height="190"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="327" id="VVQ-KU-Rhx"/>
@@ -402,7 +402,7 @@
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M7a-9F-bUV">
                                         <rect key="frame" x="20" y="10" width="335" height="40"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="home-64" translatesAutoresizingMaskIntoConstraints="NO" id="EyR-7r-ia3">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="home-64" translatesAutoresizingMaskIntoConstraints="NO" id="EyR-7r-ia3">
                                                 <rect key="frame" x="0.0" y="0.0" width="61.5" height="40"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
@@ -414,10 +414,10 @@
                                                     <outletCollection property="gestureRecognizers" destination="hmM-hh-fPU" appends="YES" id="l05-Wg-iu1"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bell-2-64 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="AeH-gn-el9">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bell-2-64 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="AeH-gn-el9">
                                                 <rect key="frame" x="182.5" y="0.0" width="61.5" height="40"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="services-64" translatesAutoresizingMaskIntoConstraints="NO" id="L75-NW-9JD">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="services-64" translatesAutoresizingMaskIntoConstraints="NO" id="L75-NW-9JD">
                                                 <rect key="frame" x="274" y="0.0" width="61" height="40"/>
                                             </imageView>
                                         </subviews>
@@ -633,7 +633,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="Vew-vk-6aZ" appends="YES" id="uof-Cr-PYA"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBootWhite" translatesAutoresizingMaskIntoConstraints="NO" id="NTc-Fy-9E9">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VectorBootWhite" translatesAutoresizingMaskIntoConstraints="NO" id="NTc-Fy-9E9">
                                                 <rect key="frame" x="91.5" y="0.0" width="61" height="40"/>
                                                 <gestureRecognizers/>
                                                 <connections>
@@ -690,9 +690,9 @@
                             <constraint firstItem="WJH-gZ-Y8m" firstAttribute="centerX" secondItem="dOT-tY-1rK" secondAttribute="centerX" id="Oog-pi-JRg"/>
                             <constraint firstItem="mMo-5j-Y97" firstAttribute="trailing" secondItem="WJH-gZ-Y8m" secondAttribute="trailing" constant="128" id="QrL-5Y-EVg"/>
                             <constraint firstItem="IO1-j4-FPd" firstAttribute="top" secondItem="HD1-2I-dQg" secondAttribute="bottom" constant="16" id="bKd-Cr-CBp"/>
-                            <constraint firstItem="59N-Eq-3aB" firstAttribute="leading" secondItem="mMo-5j-Y97" secondAttribute="leading" id="eiN-3P-jK3"/>
+                            <constraint firstItem="59N-Eq-3aB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mMo-5j-Y97" secondAttribute="leading" id="eiN-3P-jK3"/>
                             <constraint firstItem="HD1-2I-dQg" firstAttribute="top" secondItem="JBS-jj-scT" secondAttribute="bottom" constant="89" id="f6S-Iu-YtW"/>
-                            <constraint firstItem="59N-Eq-3aB" firstAttribute="trailing" secondItem="mMo-5j-Y97" secondAttribute="trailing" id="foa-WV-ceE"/>
+                            <constraint firstItem="59N-Eq-3aB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mMo-5j-Y97" secondAttribute="trailing" id="foa-WV-ceE"/>
                             <constraint firstItem="59N-Eq-3aB" firstAttribute="centerX" secondItem="dOT-tY-1rK" secondAttribute="centerX" id="p4z-4Z-trH"/>
                             <constraint firstItem="YpA-bI-c0Z" firstAttribute="trailing" secondItem="mMo-5j-Y97" secondAttribute="trailing" id="qFs-Mj-tLf"/>
                             <constraint firstItem="JBS-jj-scT" firstAttribute="leading" secondItem="mMo-5j-Y97" secondAttribute="leading" id="qOL-l3-Ykp"/>
@@ -727,7 +727,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1680.8" y="143.47826086956522"/>
+            <point key="canvasLocation" x="1825" y="134"/>
         </scene>
     </scenes>
     <resources>
